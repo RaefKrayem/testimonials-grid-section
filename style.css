@@ -1,0 +1,221 @@
+:root {
+    --ModerateViolet: hsl(263, 55%, 52%);
+    --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --VeryDarkBlackishBlue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    
+    --LightGray: hsl(0, 0%, 81%);
+    --LightGrayishBlue: hsl(210, 46%, 95%);
+
+    --fontFamily: 'Barlow Semi Condensed', sans-serif;
+}
+
+
+/* main styles */
+
+html {
+    padding: 0;
+    margin: 0;
+    font-family: var(--fontFamily);
+    font-size: 10px;
+}
+
+body {
+    padding: 1rem 3rem;
+    background-color: var(--LightGrayishBlue);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+ 
+
+/* ------------------------------------------------------------------------------------------
+ ------------------------------------------- Mobile Design ----------------------------------
+ --------------------------------------------------------------------------------------------
+*/
+
+.main {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main > div {
+    padding: 20px 35px;
+}
+
+
+.grid {
+    border-radius: 10px;
+}
+
+
+/* Div-1 styles */
+
+.item-1 {
+    background-color: var(--ModerateViolet);
+    background-image: url(images/bg-pattern-quotation.svg);
+    color: var(--White);
+    background-position: 90% 0;
+    background-repeat: no-repeat;
+}
+
+
+.profile-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.2rem;
+    padding-bottom: 1rem;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 2.5rem;
+    border: 2px solid transparent;
+}
+
+.Daniel {
+    border: 2px solid hsl(288, 72%, 59%);
+}
+
+
+h2 {
+    font-size: 1.2rem;
+    color: var(--White);
+}
+
+h3 {
+    font-size: 1.07rem;
+    opacity: 0.6;
+    color: var(--White);
+}
+
+p {
+    padding: 1rem 0;
+}
+
+.paragraph {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--White);
+}
+
+.description {
+    font-size: 1.2rem;
+    opacity: 0.6;
+    color: var(--White);
+}
+
+
+/* Div-2 styles */
+
+
+.item-2 {
+    background-color: var(--VeryDarkGrayishBlue);
+}
+
+.Jonathan {
+    border: 2px solid var(--White);
+}
+
+
+
+/* Div-3 styles */
+
+
+.item-3 {
+    background-color: var(--White);
+}
+
+.item-3 h2, .item-3 h3, .item-3 p, .item-3 .paragraph {
+    color: var(--VeryDarkGrayishBlue);    
+}
+
+.Jeanette {
+    border: 2px solid transparent;
+}
+
+
+/* Div-4 styles */
+
+
+.item-4 {
+    background-color: var(--VeryDarkBlackishBlue);
+}
+
+.Patrick {
+    border: 2px solid hsl(288, 72%, 59%);
+}
+
+
+
+/* Div-5 styles */
+
+
+.item-5 {
+    background-color: var(--White);
+}
+
+.item-5 h2, .item-5 h3, .item-5 p, .item-5 .paragraph {
+    color: var(--VeryDarkGrayishBlue);    
+}
+
+
+
+/* ------------------------------------------------------------------------------------------
+ ------------------------------------------- Desktop Design ----------------------------------
+ --------------------------------------------------------------------------------------------
+*/
+
+
+
+
+@media (min-width: 900px) {
+    
+html {
+    font-size: 13px;
+}
+
+.main {
+    width: 100%;
+    height: 600px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 1.2rem;
+}
+
+.main > div {
+    padding: 20px;
+}
+
+.item-1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+
+.item-3 {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.item-4 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.item-5 {
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    
+}
+
+}
